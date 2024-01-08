@@ -4,7 +4,7 @@ module.exports = defineConfig({
     'vuetify'
   ],
   lintOnSave: false,
-  publicPath: process.env.NODE_ENV === 'production' ? '/solle_vue2/' : '',
+  publicPath: process.env.NODE_ENV === 'production' ? '/solle_vuetify/' : '',
 
   pluginOptions: {
     i18n: {
