@@ -111,16 +111,16 @@ export default Vue.extend({
 
   &__toggler {
     @include flexColumn(center, center);
-    transition: background-color $transition;
+    transition: opacity $transition;
 
     @media (any-hover: hover) {
       &:hover {
-        background-color: $grey_light;
+        opacity: 0.8;
       }
     }
 
     .isOpen & {
-      background-color: $grey_light;
+      opacity: 0.8;
     }
 
     & svg {
@@ -152,6 +152,7 @@ export default Vue.extend({
     width: toRem(36);
     height: toRem(36);
     border-radius: 50%;
+    color: $mainColor;
     transition: background-color $transition;
 
     @media (any-hover: hover) {
@@ -177,6 +178,7 @@ export default Vue.extend({
   }
 
   &__label {
+    color: $mainColor;
     font-weight: 300;
 
     @media (max-width: $mobile) {

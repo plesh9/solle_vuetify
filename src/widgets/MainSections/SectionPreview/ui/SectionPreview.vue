@@ -92,7 +92,7 @@ export default defineComponent({
   &__video {
     position: fixed;
     left: 0;
-    top: $header_height;
+    top: 0;
     width: 100%;
     height: min(100vh, toRem(1080));
 
