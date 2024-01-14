@@ -1,21 +1,17 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { BaseContainer } from '@/shared/ui';
-import VideoCards from './VideoCards.vue';
-import MobileWave from '../images/wave-mobile.png';
 import Wave from '../images/wave.png';
 import { useTranslation } from '@/app/i18n/hooks';
 
 export default defineComponent({
   components: {
-    VideoCards,
     BaseContainer,
   },
   setup() {
     const t = useTranslation('HomePage.Video');
     return {
       t,
-      MobileWave,
       Wave,
     };
   },
@@ -24,16 +20,15 @@ export default defineComponent({
 
 <template>
   <section class="preview">
-    <div class="preview__wave">
-      <img class="desctop" :src="Wave" alt="wave" />
-      <img class="mobile" :src="MobileWave" alt="wave" />
+    <div class="preview__image">
+      <img :src="Wave" alt="wave" />
     </div>
     <div class="preview__wrapper">
       <BaseContainer>
         <div class="preview__content">
           <v-row class="preview__header" no-gutters>
             <v-col>
-              <h3 class="preview__title">{{ t('title') }}</h3>
+              <h2>{{ t('title') }}</h2>
             </v-col>
           </v-row>
           <div class="player">
@@ -47,7 +42,6 @@ export default defineComponent({
         </div>
       </BaseContainer>
     </div>
-    <VideoCards />
   </section>
 </template>
 
@@ -58,36 +52,10 @@ export default defineComponent({
   position: relative;
   overflow: hidden;
 
-  &__wave {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1600 / 108;
-    height: auto;
-
-    @media (max-width: $mobile) {
-      aspect-ratio: 375 / 108;
-    }
-
-    & > img {
-      position: absolute;
-      left: 0;
-      top: 0;
+  &__image {
+    & img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    & .desctop {
-      @media (max-width: $mobile) {
-        display: none;
-      }
-    }
-
-    & .mobile {
-      @media (min-width: $mobile) {
-        display: none;
-      }
+      aspect-ratio: 1604 /137;
     }
   }
 
@@ -101,7 +69,7 @@ export default defineComponent({
       top: 0;
       width: 100%;
       height: 80%;
-      background-color: $accent;
+      background-color: $parchment_cream;
       z-index: $zIndex_1;
 
       @media (max-width: $mobile) {
@@ -120,13 +88,11 @@ export default defineComponent({
     text-align: center;
     justify-content: center;
     z-index: $zIndex_1;
-    text-shadow: 0 toRem(4) toRem(4) #6a6a6a40;
-  }
+    padding-top: toRem(48);
 
-  &__title {
-    @include adaptiveValue('font-size', 60, 24, 991, 375, 1);
-    font-weight: 700;
-    color: $white;
+    @media (max-width: $mobile) {
+      padding-top: toRem(16);
+    }
   }
 }
 .player {
@@ -139,7 +105,7 @@ export default defineComponent({
   aspect-ratio: 1165 / 614;
 
   @media (max-width: $mobile) {
-    margin-top: toRem(40);
+    margin-top: toRem(30);
   }
 
   @media (max-width: $mobileSmall) {

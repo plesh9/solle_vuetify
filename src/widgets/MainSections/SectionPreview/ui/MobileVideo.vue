@@ -1,0 +1,12 @@
+<template>
+  <video
+    crossorigin="true"
+    playsinline
+    poster="../video/poster-2.png"
+    src="../video/preview-mobile.mp4"
+    muted
+    loop
+    autoplay
+    preload="none"
+  />
+</template>

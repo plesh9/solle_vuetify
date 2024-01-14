@@ -111,8 +111,6 @@ export default Vue.extend({
 
   &__toggler {
     @include flexColumn(center, center);
-    width: toRem(32);
-    height: toRem(32);
     transition: background-color $transition;
 
     @media (any-hover: hover) {
@@ -126,8 +124,13 @@ export default Vue.extend({
     }
 
     & svg {
-      width: toRem(32);
-      height: toRem(32);
+      width: toRem(30);
+      height: toRem(30);
+
+      @media (max-width: $mobile) {
+        width: toRem(20);
+        height: toRem(20);
+      }
     }
   }
 
@@ -136,7 +139,7 @@ export default Vue.extend({
     padding: toRem(50) toRem(20) toRem(50) toRem(40);
 
     @media (max-width: $mobile) {
-      padding: toRem(24);
+      padding: toRem(12) toRem(16);
     }
   }
 
@@ -159,16 +162,26 @@ export default Vue.extend({
 
     @media (max-width: $mobile) {
       margin: toRem(8);
+      width: toRem(22);
+      height: toRem(22);
     }
   }
 
   &__options {
     @include flexColumn();
     row-gap: toRem(36);
+
+    @media (max-width: $mobile) {
+      row-gap: toRem(24);
+    }
   }
 
   &__label {
     font-weight: 300;
+
+    @media (max-width: $mobile) {
+      font-size: toRem(12);
+    }
   }
 
   &__items {
@@ -196,6 +209,10 @@ export default Vue.extend({
       &:hover {
         color: $mainColor;
       }
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: toRem(12);
     }
 
     &.isActive {
