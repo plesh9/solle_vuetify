@@ -10,7 +10,7 @@ import { isTablet } from '@/shared/lib';
 import { useTranslation } from '@/app/i18n/hooks';
 
 export default {
-  name: 'MainHeader',
+  name: 'MainFooter',
   components: {
     BaseContainer,
     BaseLogo,
@@ -85,7 +85,7 @@ export default {
 
   &__wrapper {
     background-color: $mainColor;
-    padding: toRem(54) 0;
+    padding: toRem(42) 0;
     border-radius: toRem(20);
 
     @media (max-width: $tablet) {

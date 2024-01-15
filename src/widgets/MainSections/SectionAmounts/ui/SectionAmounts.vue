@@ -1,11 +1,11 @@
 <script lang="ts">
-import { useTranslation } from '@/app/i18n/hooks';
-import { BaseContainer, BaseAnimation } from '@/shared/ui';
+import { useTranslation } from "@/app/i18n/hooks";
+import { BaseContainer, BaseAnimation } from "@/shared/ui";
 
-import TraceMinerals from '../images/trace-minerals.png';
-import Antioxidants from '../images/antioxidants.png';
-import Adaptogens from '../images/adaptogens.png';
-import HealthyFats from '../images/healthy-fats.png';
+import TraceMinerals from "../images/trace-minerals.png";
+import Antioxidants from "../images/antioxidants.png";
+import Adaptogens from "../images/adaptogens.png";
+import HealthyFats from "../images/healthy-fats.png";
 
 export default {
   components: {
@@ -14,19 +14,19 @@ export default {
   },
   data() {
     return {
-      t: useTranslation('HomePage.Amounts'),
+      t: useTranslation("HomePage.Amounts"),
       cards: [
-        { img: TraceMinerals, title: 'trace.title', text: 'trace.text' },
+        { img: TraceMinerals, title: "trace.title", text: "trace.text" },
         {
           img: Antioxidants,
-          title: 'antioxidants.title',
-          text: 'antioxidants.text',
+          title: "antioxidants.title",
+          text: "antioxidants.text",
         },
-        { img: Adaptogens, title: 'adaptogens.title', text: 'adaptogens.text' },
+        { img: Adaptogens, title: "adaptogens.title", text: "adaptogens.text" },
         {
           img: HealthyFats,
-          title: 'healthy_fats.title',
-          text: 'healthy_fats.text',
+          title: "healthy_fats.title",
+          text: "healthy_fats.text",
         },
       ],
     };
@@ -38,29 +38,29 @@ export default {
   <section class="amounts">
     <BaseContainer>
       <div class="amounts__header">
-        <h3>{{ t('title') }}</h3>
-        <v-list class="amounts__list">
-          <v-list-item class="item" v-for="(card, index) in cards" :key="index">
-            <div class="item__content">
-              <div class="item__box">
-                <BaseAnimation :delay="index * 200">
-                  <span class="item__title">{{ t(card.title) }}</span>
-                  <p class="item__text">{{ t(card.text) }}</p>
-                </BaseAnimation>
-              </div>
-              <div class="item__img">
-                <img :src="card.img" :alt="card.title" />
-              </div>
-            </div>
-          </v-list-item>
-        </v-list>
+        <h3>{{ t("title") }}</h3>
       </div>
+      <v-list class="amounts__list">
+        <v-list-item class="item" v-for="(card, index) in cards" :key="index">
+          <div class="item__content">
+            <div class="item__box">
+              <BaseAnimation :delay="index * 200">
+                <span class="item__title">{{ t(card.title) }}</span>
+                <p class="item__text">{{ t(card.text) }}</p>
+              </BaseAnimation>
+            </div>
+            <div class="item__img">
+              <img :src="card.img" :alt="card.title" />
+            </div>
+          </div>
+        </v-list-item>
+      </v-list>
     </BaseContainer>
   </section>
 </template>
 
 <style lang="scss" scoped>
-@import 'src/app/assets/styles/variables.scss';
+@import "src/app/assets/styles/variables.scss";
 .amounts {
   &__header {
     text-align: center;

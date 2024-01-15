@@ -324,10 +324,14 @@ export default Vue.extend({
     }
 
     & > p {
-      font-weight: 500;
+      font-weight: 400;
 
       @media (max-width: $mobile) {
         font-size: toRem(12);
+      }
+
+      & strong {
+        font-weight: 500;
       }
     }
   }

@@ -76,7 +76,7 @@ export default {
   position: relative;
 
   @media (max-width: $mobile) {
-    padding-top: toRem(36);
+    padding-top: toRem(64);
   }
 
   &__wave {

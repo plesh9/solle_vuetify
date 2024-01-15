@@ -1,7 +1,7 @@
 <script lang="ts">
-import Vue from 'vue';
-import { MainHeader } from '@/widgets/Header';
-import { MainFooter } from '@/widgets/Footer';
+import Vue from "vue";
+import { MainHeader } from "@/widgets/Header";
+import { MainFooter } from "@/widgets/Footer";
 import {
   SectionPreview,
   SectionVarietyTrialBox,
@@ -12,9 +12,9 @@ import {
   HelpSection,
   SectionAmounts,
   SectionSecret,
-} from '@/widgets/MainSections';
-import { getCurrentLocale } from './i18n/utils';
-import { setLanguage } from './i18n/hooks';
+} from "@/widgets/MainSections";
+import { getCurrentLocale } from "./i18n/utils";
+import { setLanguage } from "./i18n/hooks";
 
 export default Vue.extend({
   components: {
@@ -58,7 +58,7 @@ export default Vue.extend({
 </template>
 
 <style lang="scss" scoped>
-@import 'src/app/assets/styles/variables.scss';
+@import "src/app/assets/styles/variables.scss";
 .app {
   &__wrapper {
     position: relative;

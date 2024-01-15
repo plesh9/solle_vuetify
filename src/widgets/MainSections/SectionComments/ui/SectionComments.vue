@@ -26,7 +26,7 @@ export default Vue.extend({
       Wave,
       isMobile,
       COMMENTS: [
-        { text: 'comment_1', name: 'Tanya Johnson', rating: 5 },
+        { text: 'comment_1', name: 'Tanya J, Brand Specialist', rating: 5 },
         { text: 'comment_2', name: 'Sara B', rating: 5 },
         { text: 'comment_3', name: 'Karen S', rating: 5 },
         { text: 'comment_4', name: 'Laura U', rating: 5 },

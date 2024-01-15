@@ -1,10 +1,10 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { useTranslation } from '@/app/i18n/hooks';
-import { BaseContainer, BaseAnimation, BaseButton } from '@/shared/ui';
-import { isMobile, LINK_TO_BOX } from '@/shared/lib';
-import DesctopVideo from './DesctopVideo.vue';
-import MobileVideo from './MobileVideo.vue';
+import { defineComponent } from "vue";
+import { useTranslation } from "@/app/i18n/hooks";
+import { BaseContainer, BaseAnimation, BaseButton } from "@/shared/ui";
+import { isMobile, LINK_TO_BOX } from "@/shared/lib";
+import DesctopVideo from "./DesctopVideo.vue";
+import MobileVideo from "./MobileVideo.vue";
 
 export default defineComponent({
   components: {
@@ -18,7 +18,7 @@ export default defineComponent({
     return {
       LINK_TO_BOX,
       isMobile,
-      t: useTranslation('HomePage.Preview'),
+      t: useTranslation("HomePage.Preview"),
     };
   },
 });
@@ -31,7 +31,7 @@ export default defineComponent({
         <v-col cols="12">
           <div class="preview__content">
             <BaseAnimation :delay="300">
-              <h1 class="preview__title">{{ t('title') }}</h1>
+              <h1 class="preview__title">{{ t("title") }}</h1>
             </BaseAnimation>
             <BaseAnimation :delay="600">
               <BaseButton
@@ -40,7 +40,7 @@ export default defineComponent({
                 variant="second"
                 :href="LINK_TO_BOX"
               >
-                {{ t('get_box') }}
+                {{ t("get_box") }}
               </BaseButton>
             </BaseAnimation>
           </div>
@@ -55,7 +55,7 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import 'src/app/assets/styles/variables.scss';
+@import "src/app/assets/styles/variables.scss";
 
 .preview {
   position: relative;
@@ -69,7 +69,7 @@ export default defineComponent({
     row-gap: toRem(38);
     text-align: center;
     max-width: toRem(814);
-    margin: 0 auto;
+    margin: 0 auto $header_height;
     z-index: $zIndex_1;
 
     @media (max-width: $mobile) {
@@ -97,7 +97,7 @@ export default defineComponent({
     height: min(100vh, toRem(1080));
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;

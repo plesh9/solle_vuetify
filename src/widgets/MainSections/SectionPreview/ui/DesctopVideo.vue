@@ -7,6 +7,6 @@
     muted
     loop
     autoplay
-    preload="none"
+    preload="metadata"
   />
 </template>

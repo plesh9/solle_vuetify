@@ -14,7 +14,7 @@ export default {
   <a href="#" class="logo">
     <img
       v-if="variant === 'base'"
-      src="@/app/assets/images/icons/logo.png"
+      src="@/app/assets/images/icons/logo.svg"
       class="logo__image"
       alt="logo"
     />
