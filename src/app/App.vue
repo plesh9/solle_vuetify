@@ -9,7 +9,7 @@ import {
   SectionCards,
   SectionVideo,
   SectionComments,
-  HelpSection,
+  SectionHelp,
   SectionAmounts,
   SectionSecret,
 } from "@/widgets/MainSections";
@@ -26,7 +26,7 @@ export default Vue.extend({
     SectionCards,
     SectionVarietyTrialBox,
     SectionComments,
-    HelpSection,
+    SectionHelp,
     SectionAmounts,
     SectionSecret,
   },
@@ -42,7 +42,7 @@ export default Vue.extend({
     <MainHeader />
     <v-main>
       <SectionPreview />
-      <HelpSection />
+      <SectionHelp />
       <div class="app__wrapper">
         <SectionVideo />
         <SectionSliders />

@@ -2,7 +2,7 @@
   <video
     crossorigin="true"
     playsinline
-    poster="../video/poster-2.png"
+    poster="../video/poster.png"
     src="../video/preview-mobile.mp4"
     muted
     loop

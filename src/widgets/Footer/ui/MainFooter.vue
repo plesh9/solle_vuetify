@@ -5,12 +5,12 @@ import {
   FacebookIcon,
   InstagramIcon,
   YoutubeIcon,
-} from '@/shared/ui';
-import { isTablet } from '@/shared/lib';
-import { useTranslation } from '@/app/i18n/hooks';
+} from "@/shared/ui";
+import { isTablet } from "@/shared/lib";
+import { useTranslation } from "@/app/i18n/hooks";
 
 export default {
-  name: 'MainFooter',
+  name: "MainFooter",
   components: {
     BaseContainer,
     BaseLogo,
@@ -18,11 +18,14 @@ export default {
   data() {
     return {
       isTablet,
-      t: useTranslation('Footer'),
+      t: useTranslation("Footer"),
       socials: [
-        { icon: FacebookIcon, href: '#' },
-        { icon: InstagramIcon, href: '#' },
-        { icon: YoutubeIcon, href: '#' },
+        { icon: FacebookIcon, href: "https://www.facebook.com/SolleNaturals" },
+        { icon: InstagramIcon, href: "https://www.instagram.com/sollenaturals/" },
+        {
+          icon: YoutubeIcon,
+          href: "https://www.youtube.com/channel/UCtIL0YOEjTuYNYTDO8SpVrg",
+        },
       ],
     };
   },
@@ -36,16 +39,12 @@ export default {
         <div class="footer__content">
           <div class="footer__main">
             <BaseLogo class="footer__logo" variant="white" />
-            <p v-if="!isTablet" class="footer__copy">{{ t('copyright') }}</p>
+            <p v-if="!isTablet" class="footer__copy">{{ t("copyright") }}</p>
           </div>
           <div class="footer__box">
             <v-list class="footer__socials">
-              <v-list-item
-                class="social"
-                v-for="(social, index) in socials"
-                :key="index"
-              >
-                <a class="social__link" :href="social.href">
+              <v-list-item class="social" v-for="(social, index) in socials" :key="index">
+                <a class="social__link" :href="social.href" target="_blank">
                   <component :is="social.icon" />
                 </a>
               </v-list-item>
@@ -58,17 +57,17 @@ export default {
             </div>
           </div>
           <div class="footer__info">
-            <p>{{ t('info') }}</p>
+            <p>{{ t("info") }}</p>
           </div>
         </div>
-        <p v-if="isTablet" class="footer__copy">{{ t('copyright') }}</p>
+        <p v-if="isTablet" class="footer__copy">{{ t("copyright") }}</p>
       </BaseContainer>
     </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
-@import 'src/app/assets/styles/variables.scss';
+@import "src/app/assets/styles/variables.scss";
 
 .footer {
   position: relative;

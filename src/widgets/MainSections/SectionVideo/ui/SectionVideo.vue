@@ -1,15 +1,15 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { BaseContainer } from '@/shared/ui';
-import Wave from '../images/wave.png';
-import { useTranslation } from '@/app/i18n/hooks';
+import { defineComponent } from "vue";
+import { BaseContainer } from "@/shared/ui";
+import Wave from "../images/wave.png";
+import { useTranslation } from "@/app/i18n/hooks";
 
 export default defineComponent({
   components: {
     BaseContainer,
   },
   setup() {
-    const t = useTranslation('HomePage.Video');
+    const t = useTranslation("HomePage.Video");
     return {
       t,
       Wave,
@@ -28,15 +28,12 @@ export default defineComponent({
         <div class="preview__content">
           <v-row class="preview__header" no-gutters>
             <v-col>
-              <h2>{{ t('title') }}</h2>
+              <h2>{{ t("title") }}</h2>
             </v-col>
           </v-row>
           <div class="player">
             <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="KKg5mLqfNMk"
-              ></div>
+              <div data-plyr-provider="youtube" data-plyr-embed-id="IzmCP9Yd6dc"></div>
             </vue-plyr>
           </div>
         </div>
@@ -46,7 +43,7 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import 'src/app/assets/styles/variables.scss';
+@import "src/app/assets/styles/variables.scss";
 
 .preview {
   position: relative;
@@ -63,7 +60,7 @@ export default defineComponent({
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -115,13 +112,8 @@ export default defineComponent({
 </style>
 
 <style lang="scss">
-// .plyr__video-embed,
-// .plyr__video-wrapper--fixed-ratio {
-//   height: 100% !important;
-//   padding-bottom: 0 !important;
-// }
-
-// .plyr__poster {
-//   background-size: cover !important;
-// }
+.plyr__video-embed iframe,
+.plyr__poster {
+  transform: translateY(-5px);
+}
 </style>
